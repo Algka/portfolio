@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="À propos| Komlan Alphonse Gokou" description="À propos de Komlan Alphonse Gokou">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="À propos"
+				tagline="Merci d'être passé. Lisez ci-dessous pour en savoir plus sur moi et mon parcours."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/at-work.jpg"
+					alt="Jeanine White at work with a colleague"
+				/>
+			</Hero>
+
+
+			<section>
+				<h2 class="section-title">À propos</h2>
+				<div class="content">
+					<p>
+						Mon parcours a commencé pendant mes périodes d'études au niveaux secondaires. Je commence déjà sans apprendre au préalable la réparation des matériels technologiques tels que les portables, les radios. Je commençais déjà à faire des configuration de réseaux à mes camarades en classe de même que certains soutiens techniques aux personnels dans le quartier où je vivais. 
+					</p>
+					<p>
+						Bien que j'ai mon BAC 2 série littéraire mention assez-bien avec de fortes notes dans les matières scientifiques, j'ai poursuivi mes études en faisant l'histoire au campus et suivant une formation modulaire en électronique, maintenance-informatique et réseaux en 2017 également. Cela a été moyennement difficile car je possédais en moi-même cette passion à la technologie.
+					</p>
+					<p>
+						En Novembre 2020 que j'ai terminé ma formation avec attestation reçu, j'ai aussi fini mes études en Histoire en recevant mon attestation de Licence fondamentale le 9 Juin 2021.
+					</p>
+					<p>
+						A la suite, je me suis auto-employé comme agent de soutien aux utilisateurs pendant un ans voir deux ans. J'avais eu à travailler à des autorités de la place ainsi qu'à des entreprises moyens comme grands grâce à mes efforts et qualités fournis. A la recherche des finances pour lancer mon propre entreprise dont le nom les <span>AL-TECHNOLOGIE</span>, je me suis lancé dans le domaine de l'enseignement.
+					</p>
+					<p>
+						Mon parcours en enseignement a été remarquable. Au début c'était frustrant avec la pésence des élèves avec des objectifs à atteindre à la fin de l'année. A mon arrivée, j'ai reçu la classe de CM1 et je l'ai réussi avec la grâce de Dieu et aussi parce que depuis les années 2015 je faisais des cours de répétition à domicile à des enfants de niveaux primaire, collège comme secondaire.
+					</p>
+					<p>
+						Dans l'année suivante, j'ai eu la classe de CM2 grâce à mes efforts fournis et là j'ai fais les deux premiers trimestres avec mes candidats que j'ai eu une opportunités de la part de mon patron Mr Hector OCCANSEY président de INFINITUS-SAS de venir être son adjoint administratif médicaux et en même temps intervenir étant agent de soutien aux personnels de l'hopital depuis Mars 2023 jusqu'à présent.
+					</p>
+					<p>
+						Etant à ce poste,je me forme étant développeur-web en ligne. et c'est un monde que j'aime avec le temps. Ce monde de développeur que je me suis attaché, c'est grâce à Mr Herver OCCANSEY une personne à qui je remercie Dieu pour sa vie de chaque jour. 
+					</p>
+					<p>
+						Pour résumé, titulaire d’une licence en histoire contemporaine et enseignant, j’ai suivi une formation modulaire attestée de trois ans en électronique, maintenance-informatique et réseaux. Actuellement, je suis adjoint administratif médicaux et agent de soutien informatique dans une clinique privée. Je suis des cours de développeur-web sur OpenClassrooms. Passionné, courtois et responsable, ma passion est de voir mon rêve de devenir technicien de l'information réalisé.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p>- Harmattan et Mousson de 2015-2020: Licence fondamentale (LMD) en Histoire contemporaine à l'Université de Lomé</p>
+					<p>- Juin 2015: Baccalauréat deuxième partie (BAC II) au Lycée de Lomé-Port</p>
+					<p>- Mai 2013: Baccalauréat première partie (BAC I) au Lycée de Lomé-Port</p>
+					<p>- Juillet 2010: Brevet d'étude du premier cycle (BEPC) au Complexe Adventiste du Spetième Jour</p>
+					<p>- Juin 2005: Certificat de fin d'étude du premier degré (CEPD) à l'école privée laîque Sénamé</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Centre d'intérêt</h2>
+				<div class="content">
+					<p>officia unde omnis</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	span{
+		color: rgb(17, 17, 189);
+		font-weight: bold;
+	}
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
